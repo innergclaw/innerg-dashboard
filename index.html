@@ -463,6 +463,33 @@
 </head>
 <body>
 
+  <!-- Password Gate -->
+  <div id="password-gate" style="position: fixed; inset: 0; background: #0a0a0a; z-index: 99999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; color: #00ff88;">◈ INNERG COMMAND</div>
+    <div style="font-family: 'Inter', sans-serif; color: #888; font-size: 0.9rem;">Enter passcode to continue</div>
+    <input type="password" id="password-input" placeholder="••••••••••" style="background: #111; border: 1px solid #333; padding: 14px 24px; font-size: 1rem; color: #fff; border-radius: 8px; text-align: center; outline: none; width: 220px;" onkeypress="if(event.key==='Enter')checkPassword()">
+    <div id="password-error" style="color: #ff4444; font-size: 0.8rem; display: none;">Incorrect passcode</div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password-input');
+      const error = document.getElementById('password-error');
+      const gate = document.getElementById('password-gate');
+      if (input.value === 'innerGbaby') {
+        gate.style.display = 'none';
+        sessionStorage.setItem('innerg-auth', 'true');
+      } else {
+        error.style.display = 'block';
+        input.value = '';
+        input.focus();
+      }
+    }
+    if (sessionStorage.getItem('innerg-auth') === 'true') {
+      document.getElementById('password-gate').style.display = 'none';
+    }
+  </script>
+
   <!-- Header -->
   <header class="header">
     <div class="logo">
