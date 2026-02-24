@@ -16,13 +16,13 @@ Central dashboard for all InnerG Intel projects, tools, and systems.
 - OpenClaw (AI agent framework)
 - Telegram Bot (@INNERG_CLAW_BOT)
 - GitHub
-- YouTube (@innergexchange)
+- YouTube (@innergintel)
 - Mr Odds Topics (6 channels)
 - MiniMax AI
 
 ## Quick Links
 
-- 📺 [YouTube](https://youtube.com/@innergexchange)
+- 📺 [YouTube](https://youtube.com/@innergintel)
 - 💻 [GitHub](https://github.com/innergclaw)
 - 🌐 [OwnYourWeb](https://innergclaw.github.io/ownyourweb-landing/)
 - 📊 [PrintScore](https://printscore-web-xo3n.vercel.app/)
